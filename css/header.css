@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Sansita;
+    src: url('./Sansita_Swashed/SansitaSwashed-VariableFont_wght.ttf');
+}
 body {
     padding: 10px;
     font-family: Arial;
@@ -39,9 +43,19 @@ div.transbox {
 }
 .header h1 {
     font-size: 50px;
+    font-family: Sansita, sans-serif;
+    font-weight: 300;
+    text-transform: capitalize;
 }
 .topnav {
     overflow: hidden;
+    background-color: #333;
+}
+.topnav > a {
+    border-left: solid 1px #fff;
+    border-right: solid 1px #fff;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background-color: #333;
 }
 .topnav a {
