@@ -3,11 +3,6 @@
     font-family: Raleway;
     src: url('./Raleway-VariableFont_wght.ttf');
 }
-/* Tags Styles */
-body {
-    margin: unset;
-    padding: unset;
-}
 /* Classes Styles */
 .content {
     display: flex;
