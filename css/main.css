@@ -1,75 +1,133 @@
+/* Fonts Importation */
+@font-face {
+    font-family: Raleway;
+    src: url('./Raleway-VariableFont_wght.ttf');
+}
+/* Tags Styles */
 body {
-    margin: 0;
-    background: #eee;
-    height: auto;
+    margin: unset;
+    padding: unset;
 }
-
-h1 {
-    font-weight: 400;
-    font-size: 2.5rem;
+/* News Cards Style */
+.mains-news {
+    display: flex;
+    flex-direction: column;
+}
+.news-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 16px;
+    padding: unset;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+    font-family: Raleway, sans-serif;
+    color:#000;
+    background-color:#fff;
+}
+.news-card h3 {
+    margin: 10px 0;
+    padding: 0 16px;
+    font-size: 24px;
+    font-weight: 300;
     text-transform: uppercase;
-    margin: 0;
 }
-h2 {
-    font-weight: 400;
-    font-size: 1.2rem;
+.news-card h4 {
+    margin: 10px 0;
+    padding:0.01em 16px;
+    font-size: 20px;
+    font-weight: 300;
     text-transform: capitalize;
-    margin: 0;
 }
-img {
-    display: block;
+.news-card h5 {
+    margin: 10px 0;
+    padding: 0 16px;
+    font-size: 18px;
+    font-weight: 200;
+}
+.news-card img {
     width: 100%;
 }
-main {
-    max-width: 900px;
-    margin: auto;
-    box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1), -30px 0px 40px rgba(0, 0, 0, 0.1)
+.news-card p {
+    margin: 16px 0;
+    padding: 0 16px;
+    font-size: 15px;
+    line-height: 1.5;
+    max-height: 100%;
 }
-#landing {
-    background: #fff;
+.news-card button {
+    display:inline-block;
+    justify-content: flex-end;
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 10px 5px;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    color:#000;
+    background-color:#fff;
+    border:1px solid #ccc;
+    overflow:hidden;
+    text-decoration:none;
+    text-align:center;
+    cursor:pointer;
 }
-#landing-text {
+.news-date{
+    opacity:0.60;
+}
+.secondary-news {
     display: flex;
-    flex: 0 1 40vw;
-    height: 50vh;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    flex-direction: column;
 }
-#landing-text h2 {
-    color: #888;
+.extra-news {
+    display: none;
 }
-#landing-image {
-    background: url('../img/nathan-dumlao-De8wMYoSSBc-unsplash.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50vh;
-    flex: 0 1 60vw;
-    margin: 0;
+.extra-news h3{
+    font-size: 18px;
 }
-.btn {
-    padding: 0.5rem 2rem;
-    border: 1px #ccc solid;
-    display: inline-block;
-    margin: 2rem 0 0;
-    border-radius: 50px;
-    text-decoration: none;
-    color: #333;
+.extra-news h5{
+    font-size: 12px;
 }
-.btn:hover {
-    background: #f4f4f4;
-}
-@media(min-width: 500px) {
-    #landing {
-        display:flex;
+/* Media Querys */
+@media screen and (min-width: 480px) {
+    .mains-news {
+        flex-direction: row;
     }
-    #landing-text {
-        height: 100vh;
+    .mains-news .news-card{
+        width: 50%;
     }
-    #landing-image {
-        height: 100vh;
+    .secondary-news {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .secondary-news .news-card{
+        flex: 1;
+    }
+    .secondary-news h3{
+        font-size: 20px;
+    }
+    .secondary-news h5{
+        font-size: 14px;
+    }
+    .secondary-news p{
+        font-size: 8px;
+    }
+    .extra-news .news-card{
+        flex: 1;
+    }
+}
+@media screen and (min-width: 768px) {
+    .content {
+        display: flex;
+    }
+    .main {
+        width: 75%;
+    }
+    .mains-news {
+        flex-direction: row;
+    }
+    .text-hidden {
+        display: none;
+    }
+    .extra-news {
+        display: flex;
     }
 }

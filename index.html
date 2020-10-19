@@ -6,56 +6,162 @@
         <title>The Daily Buck</title>
         <link rel="icon" href="img/logo.png">
         <link rel="stylesheet" href="css/header.css" type="text/css">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <link rel="stylesheet" href="css/rest.css" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
-        <div class="header transbox">
-            <h1>The daily buck</h1>
+        <header class="main-header">
+            <img src="./img/logo.png" alt="logo">
+            <h1>the daily buck</h1>
+        </header>
+        <nav class="top-nav">
+            <button type="menu" class="button">
+                <i class="material-icons">menu</i>
+            </button>
+            <ul id="menu-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Entertaiment</a></li>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">Life</a></li>
+                <li><a href="#">Planet</a></li>
+            </ul>
+            <button type="submit" class="button">
+                <i class="material-icons">search</i>
+            </button>
+        </nav>
+        <div class="content">
+            <main class="main">
+                <section class="mains-news">
+                    <div class="news-card">
+                        <img src="/img/nature.jpg" alt="Ponte Vedra Beach">
+                        <h3><b>NATURE</b></h3>
+                        <h5>Success of pollution-control for beaches questioned in Ponte Vedra Beach. <span class="news-date">Octuber 17, 2020</span></h5>
+                        <p>
+                            The nor'easter that tore through St. Johns County on Sept. 20 produced more than just high winds and flash-flooding across the region.
+                            It caused severe erosion along the coastline, including Ponte Vedra Beach where as much as 4 feet of sand was lost or shifted in some locations.
+                        </p>
+                        <button><b>read more »</b></button>
+                    </div>
+                    <div class="news-card">
+                        <img src="/img/society.jpg" alt="Anti-racism protests">
+                        <h3><b>Society</b></h3>
+                        <h5>Anti-racism protests in Kenosha, Wisconsin. The relief of the people, <span class="news-date">Octuber 16, 2020</span></h5>
+                        <p>
+                            The cars were set on fire after hundreds of people took to the streets overnight to protest the shooting of local black man Jacob Blake by police.
+                            According to the Los Angeles County sheriff’s deputies, the man was riding a bicycle when they tried to stop him for allegedly violating a vehicle code.
+                        </p>
+                        <button><b>read more »</b></button>
+                    </div>
+                </section>
+                <section class="secondary-news">
+                    <div class="news-card">
+                        <img src="/img/earth.jpg" alt="Earth satellites">
+                        <h3><b>Earth</b></h3>
+                        <h5>Possible new 'minimoon' discovered orbiting earth, <span class="news-date">September 29, 2020</span></h5>
+                        <p class="text-hidden">
+                            It's been with us for three years, astronomers say. Sadly, it'll probably be gone by spring.
+                            Tumbling through Earth's increasingly crowded orbit are about 5,000 satellites, half a million pieces
+                            of human-made debris and only one confirmed natural object: the moon.
+                        </p>
+                        <button><b>read more »</b></button>
+                    </div>
+                    <div class="news-card">
+                        <img src="/img/economy.jpg" alt="Mortage rates">
+                        <h3><b>Economy</b></h3>
+                        <h5>Mortgage rates set yet another record low, but applications fall, <span class="news-date">September 20, 2020</span></h5>
+                        <p class="text-hidden">
+                            Borrowers are clearly used to hearing that mortgage rates set another record low because last week’s dip did nothing
+                            to spur mortgage demand. The volume of applications for mortgages decreased 0.7% for the week, according to the
+                            Mortgage Bankers Association’s seasonally adjusted index.
+                        </p>
+                        <button><b>read more »</b></button>
+                    </div>
+                    <div class="news-card">
+                        <img src="/img/enviroment.jpg" alt="Polar bear">
+                        <h3><b>Enviroment</b></h3>
+                        <h5>Polar bears in captivity: Does it help or hinder conservation?, <span class="news-date">September 15, 2020</span></h5>
+                        <p class="text-hidden">
+                            The natural habitat of polar bears is disappearing. Climate change and the loss of sea ice are threatening these Arctic mammals,
+                            as their home melts beneath their feet. The global population of polar bears is currently estimated to be around 25,000.
+                            When it comes to the conservation of polar bears, the view of zoo proponents and critics differ greatly. Zoo advocates argue
+                            that breeding polar bears in captivity can contribute to species conservation.
+                        </p>
+                        <button><b>read more »</b></button>
+                    </div>
+                    <div class="news-card">
+                        <img src="/img/wall-street.jpg" alt="Wall Street">
+                        <h3><b>Finance</b></h3>
+                        <h5>Pressure on NYC Commercial Real Estate Worries Investors, <span class="news-date">September 15, 2020</span></h5>
+                        <p class="text-hidden">
+                            Signs of pressure on New York City’s commercial properties are fueling investor bets that trouble in the nation’s largest real-estate
+                            market could spread pain nationwide. Although stock markets are near records, assets whose fortunes are more directly tied to New York’s
+                            status as a heart of tourism and culture are showing acute sensitivity to the pandemic’s disruptions.
+                        </p>
+                        <button><b>read more »</b></button>
+                    </div>
+                </section>
+                <section class="extra-news">
+                    <div class="news-card">
+                        <img src="/img/sports.jpg" alt="Sattelites">
+                        <h3><a href="#" class="link"><b>Sports</b></a></h3>
+                        <h5>Five talking points from the Tour of Flanders 2020, <span class="news-date">Octuber 2, 2020</span></h5>
+                    </div>
+                    <div class="news-card">
+                        <img src="/img/health.jpg" alt="Mortage rates">
+                        <h3><a href="#" class="link"><b>Health</b></a></h3>
+                        <h5>Diets higher in protein, particularly plant protein, linked to lower rates of early death, <span class="news-date">Octuber 5, 2020</span></h5>
+                    </div>
+                    <div class="news-card">
+                        <img src="/img/tech.jpg" alt="Polar bear">
+                        <h3><a href="#" class="link"><b>Tech</b></a></h3>
+                        <h5>Tesla Model 3 gets design changes inside and out, increased range, <span class="news-date">Octuber 13, 2020</span></h5>
+                    </div>
+                </section>
+            </main>
+            <aside class="aside">
+                <div class="news-card">
+                    <img src="/img/forest.jpg" alt="Forest">
+                    <h4><b>Old-growth forest network</b></h4>
+                    <p>
+                        Discover the old-growth and mature native forests of California currently dedicated in the Old-Growth Forest Network.
+                    </p>
+                    <p class="text-hidden">
+                        Follow the links below for details on each dedicated forest, including maps, directions, hiking trails, and parking
+                        information. Do you know of a forest that should be added to our Network? <a href="#" class="link">Sign up</a> to become a volunteer County Coordinator
+                        and help us dedicate the forest, or nominate it for consideration.
+                    </p>
+                    <button><b>read more »</b></button>
+                </div>
+                <div class="posts-container">
+                    <h4>popular posts</h4>
+                    <ul class="posts-list">
+                        <li>
+                            <img src="/img/dollar.jpg" alt="Post1">
+                            <a href="#">The dollar today</a>
+                        </li>
+                        <li>
+                            <img src="/img/airlines.jpg" alt="Post2">
+                            <a href="#">Airlines in crisis</a>
+                        </li>
+                        <li>
+                            <img src="/img/police.jpg" alt="Post3">
+                            <a href="#">Police abuse</a>
+                        </li>
+                        <li>
+                            <img src="/img/space-x.jpg" alt="Post4">
+                            <a href="#">Space-X</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="banner">
+                    <img src="/img/banner.jpg" alt="Banner">
+                </div>
+            </aside>
         </div>
-        <div class="topnav">
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="javascript:void(0);" class="icon" onclick="">
-                <i class="fa fa-bars"></i>
-              </a>
-        </div>
-        <div class="row">
-            <div class="leftcolumn">
-                <div class="card transbox">
-                    <h2>TITLE HEADING</h2>
-                    <h5>Title description, Dec 7, 2017</h5>
-                    <div class="fakeimg" style="height:200px;">Image</div>
-                    <p>Some text..</p>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                </div>
-                <div class="card">
-                    <h2>TITLE HEADING</h2>
-                    <h5>Title description, Sep 2, 2017</h5>
-                    <div class="fakeimg" style="height:200px;">Image</div>
-                    <p>Some text..</p>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                </div>
-            </div>
-            <div class="rightcolumn">
-                <div class="card">
-                    <h2>About Me</h2>
-                    <div class="fakeimg" style="height:100px;">Image</div>
-                    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-                </div>
-                <div class="card">
-                    <h3>Popular Post</h3>
-                    <div class="fakeimg"><p>Image</p></div>
-                    <div class="fakeimg"><p>Image</p></div>
-                    <div class="fakeimg"><p>Image</p></div>
-                </div>
-                <div class="card">
-                    <h3>Follow Me</h3>
-                    <p>Some text..</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <p>Footer</p>
-        </div>
+        <footer class="footer">
+            <p>© 2020 The Daily Buck, a division of Radium Rocket</p>
+        </footer>
     </body>
 </html>
