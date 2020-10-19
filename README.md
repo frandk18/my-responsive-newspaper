@@ -4,7 +4,7 @@
 
 Remote repository for the cover of my responsive newspaper
 
-URL: https://frandk18.github.io/my-responsive-newspaper/
+GitHub Pages: https://frandk18.github.io/my-responsive-newspaper/
 
 ---
 
