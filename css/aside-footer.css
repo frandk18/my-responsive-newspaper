@@ -21,7 +21,14 @@
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     font-family: Raleway, sans-serif;
 }
-.posts-container h4 {
+.news-card h3 {
+    margin: 10px 0 5px 0;
+    padding: 0 16px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.posts-container h3 {
     margin: 0;
     padding: 18px 16px;
     font-size: 20px;
@@ -82,8 +89,11 @@
         flex-direction: column;
         width: 25%;
     }
-    .aside .news-card h4 {
-        font-size: 1.5vw;
+    .news-card h3 {
+        font-size: 1.7vw;
+    }
+    .posts-container h3 {
+        font-size: 1.8vw;
     }
     .aside .news-card p {
         margin-top: 10px;
@@ -96,6 +106,6 @@
         display: flex;
     }
     .posts-list a {
-        font-size: 14px;
+        font-size: 1.4vw;
     }
 }
