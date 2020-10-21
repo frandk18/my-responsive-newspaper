@@ -90,14 +90,14 @@
         width: 25%;
     }
     .news-card h3 {
-        font-size: 1.7vw;
+        font-size: 1.6vw;
     }
     .posts-container h3 {
-        font-size: 1.8vw;
+        font-size: 1.6vw;
     }
     .aside .news-card p {
         margin-top: 10px;
-        font-size: 1.2vw;
+        font-size: 1.1vw;
     }
     .text-hidden {
         display: none;
@@ -106,6 +106,6 @@
         display: flex;
     }
     .posts-list a {
-        font-size: 1.4vw;
+        font-size: 1.2vw;
     }
 }
