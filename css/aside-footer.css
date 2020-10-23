@@ -4,42 +4,82 @@
     src: url('./Raleway-VariableFont_wght.ttf');
 }
 /* Classes Styles*/
-.aside .text-hidden {
-    margin-top: 0;
+.aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
-.aside button {
-    display: none;
+.subscription-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 16px;
+    padding: unset;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+    font-family: Raleway, sans-serif;
+    color: #000;
+    background-color: #fff;
 }
-.link {
+.subscription-card img {
+    width: 100%;
+}
+.subscription-title {
+    margin: 15px 0 5px 0;
+    padding: 0 16px;
+    font-size: calc(0.75rem + 1.2vmin);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.subscription-card p {
+    margin: 10px 0 0 0;
+    padding: 0 16px;
+    font-size: calc(0.4rem + 1.2vmin);
+    line-height: 1.5;
+}
+.subscription-card .text-hidden {
+    margin-top: unset;
+    margin-bottom: 15px;
+}
+.subscription-link {
     cursor: pointer;
+    font-weight: 600;
     color: #000;
     text-decoration: underline;
     text-decoration-color: #0098fe;
+}
+.subscription-card button {
+    display: none;
+    justify-self: flex-end;
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-family: Raleway, sans-serif;
+    font-size: calc(0.3rem + 1.2vmin);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
 }
 .posts-container {
     margin: 16px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     font-family: Raleway, sans-serif;
 }
-.news-card h3 {
-    margin: 10px 0 5px 0;
-    padding: 0 16px;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-.posts-container h3 {
-    margin: 0;
+.posts-container div {
+    margin: unset;
     padding: 18px 16px;
-    font-size: 20px;
-    font-weight: 300;
+    font-size: calc(0.75rem + 1.5vmin);
+    font-weight: 400;
     text-transform: capitalize;
     color: #000;
     background-color: #f1f1f1;
 }
 .posts-list {
-    margin: unset;
-    padding: unset;
     color: #000;
     background-color: #fff;
 }
@@ -47,65 +87,63 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 16px 0;
     border-bottom: 1px solid #ddd;
     list-style-type: none;
     line-height: 1.5;
 }
 .posts-list img {
-    width: 60px;
-    margin: 0 16px;
+    width: calc(0.5rem + 7vmin);
+    margin: 0 10px 0 16px;
 }
 .posts-list a {
     margin-right: 16px;
-    font-size: 18px;
+    font-size: calc(0.5rem + 1.5vmin);
     color: #000;
     text-decoration: none;
 }
 .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 16px;
 }
 .banner img {
     width: 100%;
+    object-fit: cover;
     cursor: pointer;
 }
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: calc(0.5rem + 5vmin);
     padding: 15px 0;
     background: rgb(10, 60, 83);
     border-top: #333 1px solid;
     color: white;
     font-family: Raleway, sans-serif;
-    font-size: 14px;
+    font-size: calc(0.1rem + 2vmin);
     text-align: center;
 }
 /* Media Querys */
 @media screen and (min-width: 768px) {
     .aside {
-        display: flex;
-        flex-direction: column;
         width: 25%;
-    }
-    .news-card h3 {
-        font-size: 1.6vw;
-    }
-    .posts-container h3 {
-        font-size: 1.6vw;
-    }
-    .aside .news-card p {
-        margin-top: 10px;
-        font-size: 1.1vw;
-    }
-    .text-hidden {
-        display: none;
     }
     .aside button {
         display: flex;
     }
+    .subscription-card p {
+        margin-bottom: 10px ;
+    }
+    .text-hidden {
+        display: none;
+    }
+    .posts-container div {
+        font-size: calc(0.6rem + 1.4vmin);
+    }
     .posts-list a {
-        font-size: 1.2vw;
+        font-size: calc(0.3rem + 1.4vmin);
     }
 }
