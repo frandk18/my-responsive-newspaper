@@ -26,14 +26,14 @@
 .subscription-title {
     margin: 15px 0 5px 0;
     padding: 0 16px;
-    font-size: calc(0.75rem + 1.2vmin);
+    font-size: calc(0.6rem + 1.4vmin);
     font-weight: 600;
     text-transform: capitalize;
 }
 .subscription-card p {
     margin: 10px 0 0 0;
     padding: 0 16px;
-    font-size: calc(0.4rem + 1.2vmin);
+    font-size: calc(0.2rem + 1.4vmin);
     line-height: 1.5;
 }
 .subscription-card .text-hidden {

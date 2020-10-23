@@ -3,6 +3,9 @@
     font-family: Raleway;
     src: url('./Raleway-VariableFont_wght.ttf');
 }
+body {
+    font-size: calc(14px + (26 - 14) * ((100vw - 320px) / (1600 - 320)));
+}
 /* Classes Styles */
 .content {
     display: flex;
@@ -41,35 +44,35 @@
 .news-topic {
     margin: 15px 0 5px 0;
     padding: 0 16px;
-    font-size: calc(0.75rem + 2.5vmin);
+    font-size: calc(0.75rem + 1.4vmin);
     font-weight: 700;
     text-transform: uppercase;
 }
 .news-title {
     margin: 10px 0;
     padding: 0 16px;
-    font-size: calc(0.4rem + 2.2vmin);
+    font-size: calc(0.45rem + 1.4vmin);
     font-weight: 300;
 }
 .news-date{
-    font-size: calc(0.4rem + 2.2vmin);
+    font-size: calc(0.45rem + 1.4vmin);
     opacity: 0.60;
 }
 .news-card p {
     margin: 10px 0 15px 0;
     padding: 0 16px;
-    font-size: calc(0.2rem + 2.1vmin);
+    font-size: calc(0.2rem + 1.4vmin);
     line-height: 1.5;
 }
 .news-card button {
     justify-self: flex-end;
     max-width: 100%;
-    margin: 10px auto;
+    margin: calc(0.2rem + 1.4vmin) auto;
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ccc;
     font-family: Raleway, sans-serif;
-    font-size: calc(0.3rem + 2.0vmin);
+    font-size: calc(0.3rem + 1.4vmin);
     font-weight: 700;
     text-transform: uppercase;
     color: #000;
@@ -87,7 +90,7 @@
     object-fit: cover;
 }
 .topic-link {
-    margin: 15px 0 5px 0;
+    margin: 15px 0 calc(0.01rem + 1.0vmin) 0;
     padding: 0 16px;
     font-size: calc(0.35rem + 1.5vmin);
     font-weight: 700;
@@ -99,6 +102,7 @@
 }
 .extra-news .news-title {
     font-size: calc(0.15rem + 1.4vmin);
+    margin-bottom: calc(0.15rem + 1.0vmin);
 }
 .extra-news .news-date {
     font-size: calc(0.15rem + 1.4vmin);
@@ -135,13 +139,13 @@
         font-size: calc(0.35rem + 1.2vmin);
     }
     .secondary-news .news-date{
-        font-size: calc(0.35rem + 1.5vmin);
+        font-size: calc(0.35rem + 1.2vmin);
     }
     .secondary-news p{
         display: none;
     }
     .secondary-news button {
-        font-size: calc(0.3rem + 1.5vmin);
+        font-size: calc(0.3rem + 1.2vmin);
     }
 }
 @media screen and (min-width: 768px) {
@@ -151,9 +155,12 @@
     .main {
         width: 75%;
     }
-    .news-card p {
-        font-size: calc(0.15rem + 2.0vmin);
+    .news-topic, .news-title, .topic-link, .news-card p {
+        padding: 0 calc(0.4rem + 1.4vmin);
     }
+    /*.news-card p {
+        font-size: calc(0.2rem + 1.4vmin);
+    }*/
     .extra-news {
         display: flex;
     }
