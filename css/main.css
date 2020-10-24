@@ -61,7 +61,7 @@ body {
 .news-card p {
     margin: 10px 0 15px 0;
     padding: 0 16px;
-    font-size: calc(0.2rem + 1.4vmin);
+    font-size: calc(0.3rem + 1.4vmin);
     line-height: 1.5;
 }
 .news-card button {
