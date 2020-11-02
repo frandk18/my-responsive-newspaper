@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 480px;
+    max-width: 300px;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
     overflow: hidden;
     color: #000;
@@ -102,13 +102,13 @@
     visibility: visible;
 }
 
-
 .form-row small {
     visibility: hidden;
     position: absolute;
     bottom: unset;
     left: unset;
     padding: 5px 0 0 10px;
+    font-size: calc(0.5rem + 0.6vmin);
 }
 
 .form-row.error small {
@@ -138,6 +138,12 @@
 }
 
 /* Media Queries */
+@media screen and (min-width: 480px) {
+    .sub-container {
+        max-width: 540px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .sub-container {
         max-width: 900px;
