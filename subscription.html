@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Subscription Form</title>
+        <link rel="icon" href="./img/logo.png">
+        <link rel="stylesheet" href="./css/reset.css" type="text/css">
+        <link rel="stylesheet" href="./css/header.css" type="text/css">
+        <!-- <link rel="stylesheet" href="./css/main.css" type="text/css"> -->
+        <link rel="stylesheet" href="./css/aside-footer.css" type="text/css">
+        <link rel="stylesheet" href="./css/subscription.css" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+        <header class="main-header">
+            <img src="./img/logo.png" alt="logo">
+            <h1>the daily buck</h1>
+        </header>
+        <nav class="top-nav">
+            <button type="menu" class="button">
+                <i class="material-icons">menu</i>
+            </button>
+            <ul id="menu-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Entertaiment</a></li>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">Life</a></li>
+                <li><a href="#">Planet</a></li>
+            </ul>
+            <button type="search" class="button">
+                <i class="material-icons">search</i>
+            </button>
+        </nav>
+        <main class="main">
+            <div class="sub-container">
+                <span class="sub-header">Subscribe as Volunteer</span>
+                <form class="sub-form">
+                    <div class="sub-col">
+                        <div class="form-row">
+                            <label>Full Name</label>
+                            <input type="text" name="name" id="name" class="input">
+                            <i class="material-icons check">check_circle</i>
+                            <i class="material-icons no-check">error</i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-row">
+                            <label>Email</label>
+                            <input type="email" name="email" id="email" class="input">
+                            <i class="material-icons check">check_circle</i>
+                            <i class="material-icons no-check">error</i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-row">
+                            <label>Password</label>
+                            <input type="password" name="pwd" id="pwd" class="input">
+                            <i class="material-icons check">check_circle</i>
+                            <i class="material-icons no-check">error</i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-row">
+                            <label>Password check</label>
+                            <input type="password" name="pwdc" id="pwdc" class="input">
+                            <i class="material-icons check">check_circle</i>
+                            <i class="material-icons no-check">error</i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-row">
+                            <label>Age</label>
+                            <input type="text" name="age" id="age" class="input">
+                            <i class="material-icons check">check_circle</i>
+                            <i class="material-icons no-check">error</i>
+                            <small>Error message</small>
+                        </div>
+                    </div>
+                    <div class="sub-col">
+                        <div class="form-row">
+                            <label>Phone</label>
+                            <input type="tel" name="phone" id="phone" class="input">
+                            <i class="material-icons check">check_circle</i>
+                            <i class="material-icons no-check">error</i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-row">
+                            <label>Address</label>
+                            <input type="text" name="address" id="address" class="input">
+                            <i class="material-icons check">check_circle</i>
+                            <i class="material-icons no-check">error</i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-row">
+                            <label>City</label>
+                            <input type="text" name="city" id="city" class="input">
+                            <i class="material-icons check">check_circle</i>
+                            <i class="material-icons no-check">error</i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-row">
+                            <label>ZIP Code</label>
+                            <input type="text" name="zip" id="zip" class="input">
+                            <i class="material-icons check">check_circle</i>
+                            <i class="material-icons no-check">error</i>
+                            <small>Zip Code</small>
+                        </div>
+                        <div class="form-row">
+                            <label>ID</label>
+                            <input type="number" name="id" id="id" class="input">
+                            <i class="material-icons check">check_circle</i>
+                            <i class="material-icons no-check">error</i>
+                            <small>Error message</small>
+                        </div>
+                    </div>
+                </form>
+                <button type="submit">send</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>© 2020 The Daily Buck, a division of Radium Rocket</p>
+        </footer>
+        <script src="./js/app.js"></script>
+    </body>
+</html>
