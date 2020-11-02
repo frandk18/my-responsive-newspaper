@@ -2,15 +2,17 @@ window.onload = function() {
     // Variables
     var nameRegex = /^[a-zA-Z\s]{7,}$/;
     var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;  // According to RFC 5322 Standard
-    var pwdRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    var pwdRegex = /^[a-zA-Z0-9\s]{8,}$/;
     var ageRegex = /^[0-9]{1,2}$/;
+    var telRegex = /^1?[0-9]{7,}$/;
+    var addRegex = /^[a-zA-Z0-9\s]{5,}$/;
     var cityRegex = /^[a-zA-Z\s]{3,}$/;
     var idRegex = /^[0-9]{7,8}$/;
-    var zipRegex = /^[A-Za-z0-9]{3,}$/;
+    var zipRegex = /^[a-zA-Z0-9]{3,}$/;
 
     var errorMessages = ['At least 6 characters & space between','Email is not valid',
-    'At least 8 characters (only numbers & letters)', 'At least 8 characters (only numbers & letters)',
-    'Age is not valid (you must be 18 or older)', 'Phone is not valid',
+    'At least 8 characters (only numbers & letters)', 'Passwords do not match',
+    'Age is not valid (you must be 18 or older)', 'At least 7 digits (no spaces, dashes or brackets)',
     'Address is not valid','City is not valid (at least 3 characters)',
     'Zip Code is not valid (at least 3 characters)', '7 or 8 digits'];
 
@@ -21,35 +23,40 @@ window.onload = function() {
     // Functions
     function validInput(input) {
         const value = input.value;
+        var checkRes; 
         switch (input.id) {
             case 'name':
-                return (nameRegex.test(value) && /\s/.test(value));
+                checkRes = (nameRegex.test(value) && /\s/.test(value));
+                break;
             case 'email':
-                return emailRegex.test(value);
+                checkRes = emailRegex.test(value);
+                break;
             case 'pwd':
-                return pwdRegex.test(value);
+                checkRes = pwdRegex.test(value);
+                break;
             case 'pwdc':
-                return pwdRegex.test(value);
+                checkRes = value == document.querySelector('input[id="pwd"]').value;
+                break;
             case 'age':
-                return (ageRegex.test(value) && value >= 18);
+                checkRes = (ageRegex.test(value) && value >= 18);
+                break;
             case 'phone':
-                return false;
+                checkRes = telRegex.test(value);
+                break;
             case 'address':
-                return false;
+                checkRes = (addRegex.test(value) && /\s/.test(value));
+                break;
             case 'city':
-                return cityRegex.test(city);
+                checkRes = cityRegex.test(value);
+                break;
             case 'zip':
-                return zipRegex.test(zip);
+                checkRes = zipRegex.test(value);
+                break;
             case 'id':
-                return idRegex.test(id);
+                checkRes = idRegex.test(value);
+                break;
         }
-    }
-    function checkBlanks(inputs) {
-        for (let index = 0; index < inputs.length; index++) {
-            if (inputs[index].value === "") {
-                setErrorFor(inputs[index], inputs[index].id + ' cannot be blank');
-                }
-            };
+        return checkRes;
     }
     function setSuccessFor(input) {
         const formRow = input.parentElement;
@@ -67,6 +74,25 @@ window.onload = function() {
             formRow.className = 'form-row';
             input.value = '';
         }
+    }
+    function sendCheck(form) {
+        var sendArray = [];
+        for (let index = 0; index < form.length; index++) {
+            if (form[index].value === '') {
+                setErrorFor(form[index], form[index].id + ' cannot be blank');
+            }
+            if (form[index].parentElement.classList.contains('error')) {
+                alert(form[index].parentElement.lastElementChild.innerHTML);
+            } else {
+                sendArray[index] = form[index].previousElementSibling.innerHTML + ': ' + form[index].value;
+            }
+            /*if (form[index].parentElement.classList.contains('success')) {
+                sendArray[index] = form[index].previousElementSibling.innerHTML + ': ' + form[index].value; 
+            } else {
+                sendArray[index] = form[index].previousElementSibling.innerHTML + ': ' + form[index].parentElement.lastElementChild.innerHTML; 
+            }*/
+        }
+        alert(sendArray);
     }
 
     // DOM Manipulation
@@ -86,8 +112,10 @@ window.onload = function() {
             clearInput(inputs[index]);
         };
     }
-    sendBtn.addEventListener('click', (e) => {
+
+
+    sendBtn.onclick = function(e) {
         e.preventDefault();
-        checkBlanks(inputs)
-    });
+        sendCheck(inputs);
+    };
 }
