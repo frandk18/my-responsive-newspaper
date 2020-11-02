@@ -13,13 +13,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: calc(1.5rem + 1vmin);
+    padding: calc(1.5rem + 1vmin) calc(1rem + 0.5vmin);
 }
 .sub-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 300px;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
     overflow: hidden;
     color: #000;
@@ -28,20 +27,28 @@
     overflow: hidden;
 }
 .sub-header {
-    text-align: center;
-    background-color: rgb(10, 60, 83);
-    color: #fff;
-    font-weight: 400;
-    font-size: calc(0.95rem + 1.5vmin);
+    margin: unset;
     border-bottom: 1px solid #f0f0f0;
     padding: calc(0.75rem + 1.5vmin);
-    margin: unset;
-    /*font-size: 1.5rem;*/
+    font-weight: 400;
+    font-size: calc(0.95rem + 1.5vmin);
+    background-color: rgb(10, 60, 83);
+    color: #fff;
+    text-align: center;    
+}
+.hello {
+    display: none;
+    padding: calc(1.0rem + 0.5vmin) calc(1.5rem + 3vmin) 0 calc(1.5rem + 3vmin);
+    font-size: calc(0.75rem + 1.5vmin);
+    text-align: center;
+}
+.hello.show {
+    display: inline-block;
 }
 .sub-form {
     display: flex;
     flex-direction: column;
-    padding: calc(1.5rem + 3vmin) 0 0 0;
+    padding: calc(1.5rem + 1.5vmin) 0 0 0;
 }
 .sub-col {
     flex-grow: 1;
@@ -118,15 +125,9 @@
     color: #fff;
     background-color: rgb(10, 60, 83);
 }
-/* Media Queries */
-@media screen and (min-width: 480px) {
-    .sub-container {
-        max-width: 540px;
-    }
-}
 @media screen and (min-width: 768px) {
     .sub-container {
-        max-width: 900px;
+        max-width: 768px;
     }
     .sub-form {
         flex-direction: row;

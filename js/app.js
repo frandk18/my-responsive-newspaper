@@ -10,11 +10,11 @@ window.onload = function() {
     var idRegex = /^[0-9]{7,8}$/;
     var zipRegex = /^[a-zA-Z0-9]{3,}$/;
 
-    var errorMessages = ['Not valid (at least 6 characters and space between)','Not valid',
-    'Not valid (at least 8 characters, only numbers and letters)', 'Passwords do not match',
-    'Not valid (you must be 18 or older)', 'Not valid (at least 7 digits, no spaces, dashes or brackets)',
-    'Not valid (at least 5 characters, only letters, numbers and space between)','Not valid (at least 3 characters)',
-    'Not valid (at least 3 characters)', 'Not valid (7 or 8 digits)'];
+    var errorMessages = ['At least 6 characters and space between','Not valid',
+    'At least 8 characters, only numbers and letters', 'Passwords do not match',
+    'You must be 18 or older', 'At least 7 digits, no spaces, dashes or brackets',
+    'At least 5 characters, only letters, numbers and space between','At least 3 characters)',
+    'At least 3 characters', 'Not valid, 7 or 8 digits'];
 
     // Grabing elements
     const inputs = document.querySelectorAll('input');
@@ -76,23 +76,37 @@ window.onload = function() {
         }
     }
     function sendCheck(form) {
-        var errorArray = [];
-        var sendArray = [];
+        var errorString = '';
+        var sendString = '';
         for (let index = 0; index < form.length; index++) {
             if (form[index].value === '') {
                 setErrorFor(form[index], form[index].id + ' cannot be blank');
             }
             if (form[index].parentElement.classList.contains('error')) {
-                errorArray.push(form[index].previousElementSibling.innerHTML + ': ' + form[index].parentElement.lastElementChild.innerHTML);
+                errorString += (form[index].previousElementSibling.innerHTML + ': ' + form[index].parentElement.lastElementChild.innerHTML + '\n');
             } else {
-                sendArray.push(form[index].previousElementSibling.innerHTML + ': ' + form[index].value);
+                sendString += (form[index].previousElementSibling.innerHTML + ': ' + form[index].value + '\n');
             }
         }
-        (sendArray.length == 10) ? alert(sendArray) : alert(errorArray);
+        (errorString.length > 0) ? alert(errorString) : alert(sendString);
+    }
+    function bonusTrack(input) {
+        const bonusTitle = document.getElementById('bonus');
+        bonusTitle.className = 'hello show';
+        bonusTitle.innerHTML = 'Hello ' + input.value;
+        if (input.value === '') {
+            bonusTitle.className = 'hello';
+        }
     }
 
     // DOM Manipulation
     for (let index = 0; index < inputs.length; index++) {
+        if (index == 0) {
+            inputs[index].onkeyup = function (e) {
+                e.preventDefault();
+                bonusTrack(inputs[index]);
+            };
+        }
         inputs[index].onblur = function() {
             if (inputs[index].value === '') {
                 setErrorFor(inputs[index], inputs[index].id + ' cannot be blank');
@@ -102,14 +116,10 @@ window.onload = function() {
                 setSuccessFor(inputs[index]);
             }
         };
-    }
-    for (let index = 0; index < inputs.length; index++) {
         inputs[index].onfocus = function() {
             clearInput(inputs[index]);
         };
     }
-
-
     sendBtn.onclick = function(e) {
         e.preventDefault();
         sendCheck(inputs);
