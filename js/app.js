@@ -10,11 +10,11 @@ window.onload = function() {
     var idRegex = /^[0-9]{7,8}$/;
     var zipRegex = /^[a-zA-Z0-9]{3,}$/;
 
-    var errorMessages = ['At least 6 characters & space between','Email is not valid',
-    'At least 8 characters (only numbers & letters)', 'Passwords do not match',
-    'Age is not valid (you must be 18 or older)', 'At least 7 digits (no spaces, dashes or brackets)',
-    'Address is not valid','City is not valid (at least 3 characters)',
-    'Zip Code is not valid (at least 3 characters)', '7 or 8 digits'];
+    var errorMessages = ['Not valid (at least 6 characters and space between)','Not valid',
+    'Not valid (at least 8 characters, only numbers and letters)', 'Passwords do not match',
+    'Not valid (you must be 18 or older)', 'Not valid (at least 7 digits, no spaces, dashes or brackets)',
+    'Not valid (at least 5 characters, only letters, numbers and space between)','Not valid (at least 3 characters)',
+    'Not valid (at least 3 characters)', 'Not valid (7 or 8 digits)'];
 
     // Grabing elements
     const inputs = document.querySelectorAll('input');
@@ -31,11 +31,11 @@ window.onload = function() {
             case 'email':
                 checkRes = emailRegex.test(value);
                 break;
-            case 'pwd':
+            case 'password':
                 checkRes = pwdRegex.test(value);
                 break;
-            case 'pwdc':
-                checkRes = value == document.querySelector('input[id="pwd"]').value;
+            case 'password-confirm':
+                checkRes = value == document.querySelector('input[id="password"]').value;
                 break;
             case 'age':
                 checkRes = (ageRegex.test(value) && value >= 18);
@@ -76,23 +76,19 @@ window.onload = function() {
         }
     }
     function sendCheck(form) {
+        var errorArray = [];
         var sendArray = [];
         for (let index = 0; index < form.length; index++) {
             if (form[index].value === '') {
                 setErrorFor(form[index], form[index].id + ' cannot be blank');
             }
             if (form[index].parentElement.classList.contains('error')) {
-                alert(form[index].parentElement.lastElementChild.innerHTML);
+                errorArray.push(form[index].previousElementSibling.innerHTML + ': ' + form[index].parentElement.lastElementChild.innerHTML);
             } else {
-                sendArray[index] = form[index].previousElementSibling.innerHTML + ': ' + form[index].value;
+                sendArray.push(form[index].previousElementSibling.innerHTML + ': ' + form[index].value);
             }
-            /*if (form[index].parentElement.classList.contains('success')) {
-                sendArray[index] = form[index].previousElementSibling.innerHTML + ': ' + form[index].value; 
-            } else {
-                sendArray[index] = form[index].previousElementSibling.innerHTML + ': ' + form[index].parentElement.lastElementChild.innerHTML; 
-            }*/
         }
-        alert(sendArray);
+        (sendArray.length == 10) ? alert(sendArray) : alert(errorArray);
     }
 
     // DOM Manipulation

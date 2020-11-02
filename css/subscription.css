@@ -1,17 +1,13 @@
 /* Fonts Imported */
-
 @font-face {
     font-family: Raleway;
     src: url('./Raleway-VariableFont_wght.ttf');
 }
-
 /* Tags Styles */
 * {
     font-family: Raleway;
 }
-
 /* Classes Styles */
-
 .main {
     display: flex;
     flex-direction: column;
@@ -19,7 +15,6 @@
     align-items: center;
     padding: calc(1.5rem + 1vmin);
 }
-
 .sub-container {
     display: flex;
     flex-direction: column;
@@ -32,7 +27,6 @@
     border-radius: 20px;
     overflow: hidden;
 }
-
 .sub-header {
     text-align: center;
     background-color: rgb(10, 60, 83);
@@ -44,13 +38,11 @@
     margin: unset;
     /*font-size: 1.5rem;*/
 }
-
 .sub-form {
     display: flex;
     flex-direction: column;
     padding: calc(1.5rem + 3vmin) 0 0 0;
 }
-
 .sub-col {
     flex-grow: 1;
     padding: 0 calc(1.5rem + 3vmin);
@@ -60,7 +52,6 @@
     margin-bottom: 15px;
     padding-bottom: 20px;
 }
-
 .form-row label {
     display: inline-block;
     margin: 0 0 5px 15px;
@@ -76,32 +67,26 @@
     width: 100%;
     outline: none;
 }
-
 .form-row.success input {
     border-color: #2ecc71;
 }
-
 .form-row.error input {
     border-color: #e74c3c;
 }
-
 .form-row i {
     position: absolute;
     top: 30px;
     right: 10px;
     visibility: hidden;
 }
-
 .form-row.success i.check {
     color: #2ecc71;
     visibility: visible;
 }
-
 .form-row.error i.no-check {
     color: #e74c3c;
     visibility: visible;
 }
-
 .form-row small {
     visibility: hidden;
     position: absolute;
@@ -110,12 +95,10 @@
     padding: 5px 0 0 10px;
     font-size: calc(0.5rem + 0.6vmin);
 }
-
 .form-row.error small {
     color: #e74c3c;
     visibility: visible;
 }
-
 .sub-container button {
     display: block;
     max-width: 100%;
@@ -130,20 +113,17 @@
     outline: none;
     cursor: pointer;
 }
-
 .sub-container button:hover {
     font-weight: 400;
     color: #fff;
     background-color: rgb(10, 60, 83);
 }
-
 /* Media Queries */
 @media screen and (min-width: 480px) {
     .sub-container {
         max-width: 540px;
     }
 }
-
 @media screen and (min-width: 768px) {
     .sub-container {
         max-width: 900px;
