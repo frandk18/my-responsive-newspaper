@@ -1,8 +1,10 @@
 # My Responsive Newspaper
 
-**Version 1.0.0**
+**Version 1.1.0**
 
-Remote repository for the cover of my responsive newspaper
+Remote repository for the cover of my responsive newspaper and subscription form
+
+Note: Look for subscribe button or anchor inside the cover (depending on screen)
 
 GitHub Pages: https://frandk18.github.io/my-responsive-newspaper/
 
