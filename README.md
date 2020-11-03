@@ -4,7 +4,7 @@
 
 Remote repository for the cover of my responsive newspaper and subscription form
 
-Note: Look for subscribe button or anchor inside the cover (depending on screen)
+Note: Look for subscribe button or anchor inside the cover (depending on screen size)
 
 GitHub Pages: https://frandk18.github.io/my-responsive-newspaper/
 
