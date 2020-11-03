@@ -57,13 +57,18 @@
     border: 1px solid #ccc;
     font-family: Raleway, sans-serif;
     font-size: calc(0.3rem + 1.2vmin);
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     color: #000;
     overflow: hidden;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
+}
+.subscription-card button:hover {
+    font-weight: 400;
+    color: #fff;
+    background-color: rgb(10, 60, 83);
 }
 .posts-container {
     margin: 16px;

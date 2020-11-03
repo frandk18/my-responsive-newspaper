@@ -73,13 +73,18 @@ body {
     border: 1px solid #ccc;
     font-family: Raleway, sans-serif;
     font-size: calc(0.3rem + 1.4vmin);
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     color: #000;
     overflow: hidden;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
+}
+.news-card button:hover {
+    font-weight: 400;
+    color: #fff;
+    background-color: rgb(10, 60, 83);
 }
 .extra-news .news-card{
     flex: 1;
