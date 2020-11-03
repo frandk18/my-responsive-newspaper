@@ -79,7 +79,7 @@ window.onload = function() {
         var sendString = '';
         for (let index = 0; index < form.length; index++) {
             if (form[index].value === '') {
-                setErrorFor(form[index], form[index].id + ' cannot be blank');
+                setErrorFor(form[index], 'Cannot be blank');
             }
             if (form[index].parentElement.classList.contains('error')) {
                 errorString += (form[index].previousElementSibling.innerHTML + ': ' + form[index].parentElement.lastElementChild.innerHTML + '\n');
@@ -108,7 +108,7 @@ window.onload = function() {
         }
         inputs[index].onblur = function() {
             if (inputs[index].value === '') {
-                setErrorFor(inputs[index], inputs[index].id + ' cannot be blank');
+                setErrorFor(inputs[index], 'Cannot be blank');
             } else if (!validInput(inputs[index])) {
                 setErrorFor(inputs[index], errorMessages[index]);
             } else {
