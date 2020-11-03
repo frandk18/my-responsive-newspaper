@@ -1,6 +1,6 @@
 window.onload = function() {
     // Variables
-    var nameRegex = /^[a-zA-Z\s]{7,}$/;
+    var nameRegex = /^[A-Z][A-Za-z\']+(((\'|\-)?([A-Za-z])+))?$/;
     var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;  // According to RFC 5322 Standard
     var pwdRegex = /^[a-zA-Z0-9\s]{8,}$/;
     var ageRegex = /^[0-9]{1,2}$/;
@@ -23,10 +23,17 @@ window.onload = function() {
     // Functions
     function validInput(input) {
         const value = input.value;
-        var checkRes; 
+        var checkRes = true; 
+        var nameArray = [];
         switch (input.id) {
             case 'name':
-                checkRes = (nameRegex.test(value) && /\s/.test(value));
+                nameArray = value.split(' ');
+                console.log(nameArray);
+                for (let index = 0; index < nameArray.length; index++) {
+                    checkRes *= nameRegex.test(nameArray[index]);
+                    console.log(checkRes);
+                }
+                checkRes *= (nameArray.length > 1)
                 break;
             case 'email':
                 checkRes = emailRegex.test(value);
