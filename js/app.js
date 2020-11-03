@@ -34,7 +34,7 @@ window.onload = function() {
             case 'password':
                 checkRes = pwdRegex.test(value);
                 break;
-            case 'password-confirm':
+            case 'password-ck':
                 checkRes = value == document.querySelector('input[id="password"]').value;
                 break;
             case 'age':
@@ -72,7 +72,6 @@ window.onload = function() {
         const formRow = input.parentElement;
         if (formRow.classList.contains('error')) {
             formRow.className = 'form-row';
-            input.value = '';
         }
     }
     function sendCheck(form) {
