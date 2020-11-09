@@ -1,6 +1,6 @@
 window.onload = function() {
     // Variables
-    var nameRegex = /^[A-Z][A-Za-z\']+(((\'|\-)?([A-Za-z])+))?$/;
+    var nameRegex = /^[A-Za-z\']+(((\'|\-)?([A-Za-z])+))?$/;
     var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;  // According to RFC 5322 Standard
     var pwdRegex = /^[a-zA-Z0-9\s]{8,}$/;
     var ageRegex = /^[0-9]{1,2}$/;
